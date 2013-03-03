@@ -137,3 +137,25 @@ int iGetNewPos(char ** ppcPosIn)
 	return iRet;
 }
 
+void vReverse(char * acCode,char * acDeCode,int iLen)
+{
+	int i,iIndex;
+	for(i=iLen,iIndex=0;i;i--,iIndex++)
+	{
+		acDeCode[iIndex]=acCode[i-1];
+	}
+	acDeCode[iIndex]='\0';
+}
+void vAlpha2Num(char * acCode,char * acDeCode,int iLen)
+{
+	int iIndex;
+	for(iIndex=0;iIndex<iLen;iIndex++)
+	{
+		acDeCode[iIndex]=acCode[iIndex];
+		if((acCode[iIndex]<='i')&&(acCode[iIndex]>='a'))
+		{
+			acDeCode[iIndex]='0'+acCode[iIndex]-'a'+1;
+		}
+	}
+	acDeCode[iIndex]='\0';
+}

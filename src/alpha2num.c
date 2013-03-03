@@ -33,14 +33,7 @@ int main(int argc, char *argv[])  {
 		iAddPad(&pcPosOut);
 	}
 
-	for(iIndex=0;iIndex<strlen(acCode);iIndex++)
-	{
-		acDeCode[iIndex]=acCode[iIndex];
-		if((acCode[iIndex]<='i')&&(acCode[iIndex]>='a'))
-		{
-			acDeCode[iIndex]='0'+acCode[iIndex]-'a'+1;
-		}
-	}
+	vAlpha2Num(acCode,acDeCode,strlen(acCode));
 
 
 	printf("%s\n", acDeCode);

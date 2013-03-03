@@ -16,4 +16,6 @@ int iHexAscii(char * acIn,char ** pacOut);
 int iGet(char * acIn,char ** pacOut);
 int iAddPad(char ** pacOut);
 int iGetNewPos(char ** ppcPosIn);
+void vReverse(char * acCode,char * acDeCode,int iLen);
+void vAlpha2Num(char * acCode,char * acDeCode,int iLen);
 #endif /* LIBDECODE_H_ */

@@ -33,11 +33,7 @@ int main(int argc, char *argv[])  {
 		iAddPad(&pcPosOut);
 	}
 
-	for(i=strlen(acCode),iIndex=0;i;i--,iIndex++)
-	{
-		acDeCode[iIndex]=acCode[i-1];
-	}
-	acDeCode[iIndex]='\0';
+	vReverse(acCode,acDeCode,strlen(acCode));
 
 	printf("%s\n", acDeCode);
 	return EXIT_SUCCESS;
